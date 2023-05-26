@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order Characters in a String</title>
+  </head>
+  <body>
+    <h1>Order Characters in a String</h1>
+
+    <input type="text" id="inputString" placeholder="Enter a string" />
+    <button onclick="orderAndPrint()">Order</button>
+
+    <div id="output"></div>
+
+    <script>
+      function order(str) {
+        return str.split("").sort().join("");
+      }
+
+      function orderAndPrint() {
+        const inputElement = document.getElementById("inputString");
+        const str = inputElement.value;
+        console.log("Original string: " + str);
+        const orderedString = order(str);
+        console.log("Ordered string: " + orderedString);
+        document.getElementById("output").textContent =
+          "Ordered string: " + orderedString;
+      }
+    </script>
+  </body>
+</html>
